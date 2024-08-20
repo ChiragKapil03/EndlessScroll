@@ -1,12 +1,12 @@
 let apiKey = "2p8lpMpkI-VxEK1Vy0EOfQE646wmysvZLMGztoVpLq8";
 let count = 10;
 
-let apiUrl = `https:api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+// let apiUrl = ;
 
 
 async function getPhotos() {
 
-  let response = await fetch(apiUrl);
+  let response = await fetch(`https:api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`);
   let data = await response.json();
   console.log(data);
 
@@ -23,7 +23,7 @@ async function getPhotos() {
 getPhotos();
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY + window.innerHeight+100 >= document.body.offsetHeight) {
+  if (window.scrollY + window.innerHeight + 100 >= document.body.offsetHeight) {
     getPhotos();
   }
 });

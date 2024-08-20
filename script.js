@@ -6,7 +6,7 @@ let count = 20;
 
 async function getPhotos() {
   try {
-    let response = await fetch(`https:api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`);
+    let response = await fetch(`https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`);
   let data = await response.json();
   console.log(data);
 

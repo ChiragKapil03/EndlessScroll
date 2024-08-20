@@ -1,12 +1,16 @@
-// let apiKey = "45496333-3fa1d67e86f676313d5f86f45";
 
-// let count = 20;
-
-// https:api.unsplash.com/photos/random/?client_id=DUbOaOakxcTWF5daWI4c2A9jKVDO94tG9fkA8RugZEM&count=10
+function randomHeight(){
+  let a = Math.floor(300+Math.random()*450)+"px";
+  return a;
+}
+function randomWidth(){
+  let a = Math.floor(300+Math.random()*450)+"px";
+  return a;
+}
 
 async function getPhotos() {
   try {
-    let response = await fetch(`https://pixabay.com/api/?key=45496333-3fa1d67e86f676313d5f86f45&q=yellow+flowers&image_type=photo`);
+    let response = await fetch(`https://pixabay.com/api/?key=45496333-3fa1d67e86f676313d5f86f45&q=galaxy&image_type=photo`);
   let data = await response.json();
   console.log(data);
 
@@ -14,8 +18,8 @@ async function getPhotos() {
   data.hits.forEach((photo) => {
     let img = document.createElement("img");
     img.src = photo.largeImageURL;
-    img.style.height = "450px";
-    img.style.width = "400px";
+    img.style.height = randomHeight();
+    img.style.width = randomWidth();
     box.appendChild(img);
   });
   } catch (error) {

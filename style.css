@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background:linear-gradient(90deg,black,rgb(64, 64, 64),rgb(64, 63, 63),rgb(64, 64, 64),rgb(64, 63, 63),black)
+    background:linear-gradient(90deg,black,rgb(64, 63, 63),black)
 }
 
 p{
@@ -23,10 +23,13 @@ p{
     align-items: center;
     margin-top: 25px;
     flex-wrap:wrap;
-    gap:40px;
+    gap:20px;
+    padding: 50px;
 }
 
 img{
     margin-bottom: 10px;
     border-radius: 10px;
+    background-size:contain;
+    background-position: center;
 }

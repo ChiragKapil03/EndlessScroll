@@ -1,8 +1,6 @@
 let apiKey = "DUbOaOakxcTWF5daWI4c2A9jKVDO94tG9fkA8RugZEM";
-let count = 10;
 
-// let apiUrl = ;
-
+let count = 20;
 
 async function getPhotos() {
 

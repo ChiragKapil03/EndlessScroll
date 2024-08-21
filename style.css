@@ -1,11 +1,12 @@
-*{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background:linear-gradient(90deg,black,rgb(64, 63, 63),black)
+    background: linear-gradient(90deg, #020541, #050840, #480303);
+    font-family: sans-serif;
 }
 
-p{
+p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,23 +14,28 @@ p{
     font-size: 50px;
     color: aliceblue;
     font-weight: 700;
-    font-family:sans-serif;
 }
 
-.box{
+.box {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     margin-top: 25px;
-    flex-wrap:wrap;
-    gap:20px;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 50px;
 }
 
-img{
+img {
     margin-bottom: 10px;
     border-radius: 10px;
-    background-size:contain;
+    background-size: contain;
     background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
